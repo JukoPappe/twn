@@ -1,0 +1,28 @@
+@import "../styles";
+.layout {
+  display: flex;
+}
+.header {
+  display: none;
+}
+.main {
+  flex: auto;
+  background-color: $color-dark;
+}
+@media (max-width: 960px) {
+  .header {
+    display: block;
+  }
+  .sidebar {
+    display: none;
+  }
+  .floatingLayout {
+    display: block;
+  }
+  .layout {
+    flex-direction: column;
+  }
+  .main {
+    height: calc(100vh - 50px);
+  }
+}

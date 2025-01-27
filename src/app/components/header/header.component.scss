@@ -1,0 +1,22 @@
+@import "../../../styles";
+.header-layout {
+  display: flex;
+  flex: auto;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: .625rem 1.25rem;
+}
+.logo {
+  height: 30px;
+  margin: 0 auto;
+}
+.button {
+  border: none;
+  background-color: transparent;
+  .icon-size {
+    font-size: 20px;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}

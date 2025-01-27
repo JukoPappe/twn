@@ -1,2 +1,11 @@
-<app-nx-welcome></app-nx-welcome>
-<router-outlet></router-outlet>
+<div class="layout">
+  <div class="header">
+    <app-header (sidebarToggled)="toggleSidebar($event)"></app-header>
+  </div>
+  <div class="sidebar" [ngClass]="{ 'floatingLayout': floatingSidebar }">
+    <app-sidebar [floatingSidebar]="floatingSidebar"></app-sidebar>
+  </div>
+  <div class="main">
+    <router-outlet></router-outlet>
+  </div>
+</div>

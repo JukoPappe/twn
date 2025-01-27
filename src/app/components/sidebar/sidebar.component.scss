@@ -1,0 +1,47 @@
+@import "../../../styles";
+.sideMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  height: calc(100vh - 50px);
+  padding: 1.5625rem;
+  width: $sidebar-width;
+}
+.floatingLayout {
+  display: flex;
+  position: fixed;
+  left: 0;
+  height: 100vh;
+  width: $sidebar-width;
+  background: white;
+  z-index: 1;
+}
+
+.logo {
+  margin: 1.5625rem 0 3.125rem;
+  // visibility: hidden;
+}
+.link {
+  font-family: BoosterRegular;
+  font-size: 1.1875rem;
+  text-transform: uppercase;
+  color: $color-link;
+  padding: 0.7rem 0 0.7rem 0;
+  i {
+    transition: transform 0.25s;
+    margin-left: .625rem;
+    width: 21.5px;
+    text-align: center;
+  }
+  &:hover {
+    color: $color-hover;
+    i {
+      transition: transform 0.25s;
+      transform: scale(1.4);
+      width: 24px;
+    }
+  }
+}
+.active-link {
+  color: $color-hover;
+}
