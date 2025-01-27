@@ -11,9 +11,10 @@ import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { WelcomeComponent } from "./components/welcome/welcome.component";
 import { SidebarComponent } from "./components/sidebar/sidebar.component";
 import { HeaderComponent } from "./components/header/header.component";
+import { BackgroundsComponent } from "./components/background/backgrounds.component";
 
 @NgModule({
-  declarations: [AppComponent, ArticleComponent, TableComponent, WelcomeComponent, SidebarComponent, HeaderComponent],
+  declarations: [AppComponent, ArticleComponent, TableComponent, WelcomeComponent, SidebarComponent, HeaderComponent, BackgroundsComponent],
   imports: [
     CommonModule,
     RouterModule,

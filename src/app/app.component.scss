@@ -8,21 +8,28 @@
 .main {
   flex: auto;
   background-color: $color-dark;
+  padding-top: 80px;
 }
 @media (max-width: 960px) {
   .header {
     display: block;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: white;
   }
   .sidebar {
     display: none;
   }
-  .floatingLayout {
+  .floating-layout {
     display: block;
   }
   .layout {
     flex-direction: column;
   }
   .main {
-    height: calc(100vh - 50px);
+    height: calc(100vh - 80px);
   }
 }

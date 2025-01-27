@@ -1,0 +1,37 @@
+@import "../../../styles";
+.background-images {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  left: 220px;
+  .image-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 100vh;
+  }
+  .background-image-right {
+    height: 50vh;
+    width: 30vh;
+  }
+  .background-image-left {
+    height: 75vh;
+    width: 25vh;
+  }
+  .left {
+    margin-top: auto;
+    height: 75vh;
+    width: 30vh;
+  }
+  .right {
+    height: 50vh;
+    width: 30vh;
+  }
+}
+@media (max-width: 960px) {
+  .background-images {
+    top: $header-height;
+    left: 0;
+  }
+}

@@ -1,16 +1,17 @@
 @import "../../../styles";
-.sideMenu {
+.side-menu {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  height: calc(100vh - 50px);
+  height: calc(100vh - $header-height);
   padding: 1.5625rem;
   width: $sidebar-width;
 }
-.floatingLayout {
+.floating-layout {
   display: flex;
   position: fixed;
   left: 0;
+  top: 50px;
   height: 100vh;
   width: $sidebar-width;
   background: white;

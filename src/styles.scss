@@ -42,10 +42,17 @@ $color-link: #3a3d57;
 $color-hover: #03875c;
 
 $sidebar-width: 170px;
+$header-height: 50px;
 
 body {
   margin: 0;
+  font-family: BoosterRegular;
 }
 h1 {
-  font-family: BlackWoff;
+  font-family: BoosterBlack;
+  text-transform: uppercase;
+}
+h2 {
+  font-family: BoosterBlack;
+  text-transform: uppercase;
 }
