@@ -17,7 +17,7 @@
   flex: auto;
   margin-left: $sidebar-full-width;
   background-color: transparent;
-  padding-top: 80px;
+  padding: 80px 0;
 }
 
 /* Smaller screen styles */
@@ -38,10 +38,10 @@
     display: none;
   }
   .main {
-    height: calc(100vh - 80px);
     margin-left: 0;
   }
   .floating-layout {
     display: block;
+    z-index: 1;
   }
 }

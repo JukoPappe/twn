@@ -1,6 +1,15 @@
 <h1>{{(articleData | async)?.title}}</h1>
 <div class="body-text-holder" [innerHTML]="(articleData | async)?.intro"></div>
-<div *ngIf="(articleData | async)?.image?.large" class="image-holder">
-  <img class="logo" [src]="(articleData | async)?.image?.medium">
+<div *ngIf="(articleData | async)?.image?.large" class="image-container">
+  <div class="image-background">
+    <img class="background-image" [src]="(articleData | async)?.image?.medium">
+  </div>
+  <div class="image-holder">
+    <img [src]="(articleData | async)?.image?.medium">
+  </div>
+  <div class="image-title">{{(articleData | async)?.title}}</div>
 </div>
 <div class="body-text-holder" [innerHTML]="(articleData | async)?.body"></div>
+<div class="body-text-holder tags">
+  <span class="tag"*ngFor="let tag of (articleData | async)?.tags">{{tag}}</span>
+</div>
