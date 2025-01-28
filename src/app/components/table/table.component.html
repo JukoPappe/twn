@@ -1,6 +1,21 @@
+<h1>Nimekiri</h1>
 <div *ngIf="(tableData | async)?.list as articles">
-  <div *ngFor="let article of articles">
-    <app-table-row [article]="article"></app-table-row>
-  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Eesnimi</th>
+        <th>Perekonnanimi</th>
+        <th>Sugu</th>
+        <th>Sünnikuupäev</th>
+        <th>Telefon</th>
+      </tr>
+    </thead>
+    <tbody>
+    <!-- Create table rows dynamically based on data input -->
+    <tr *ngFor="let article of articles">
+      <app-table-row [article]="article"></app-table-row>
+    </tr>
+    </tbody>
+  </table>
 </div>
 
