@@ -5,12 +5,26 @@
 .header {
   display: none;
 }
+.sidebar {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  width: $sidebar-full-width;
+}
 .main {
   flex: auto;
-  background-color: $color-dark;
+  margin-left: $sidebar-full-width;
+  background-color: transparent;
   padding-top: 80px;
 }
+
+/* Smaller screen styles */
 @media (max-width: 960px) {
+  .layout {
+    flex-direction: column;
+  }
   .header {
     display: block;
     z-index: 1;
@@ -23,13 +37,11 @@
   .sidebar {
     display: none;
   }
-  .floating-layout {
-    display: block;
-  }
-  .layout {
-    flex-direction: column;
-  }
   .main {
     height: calc(100vh - 80px);
+    margin-left: 0;
+  }
+  .floating-layout {
+    display: block;
   }
 }

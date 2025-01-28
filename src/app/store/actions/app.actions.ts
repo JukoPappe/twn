@@ -1,4 +1,5 @@
 import { createAction, props } from "@ngrx/store";
+import { Article } from "../../shared/model/article";
 
 export enum AppActionTypes {
   LoadArticle = "Load article",
@@ -6,4 +7,4 @@ export enum AppActionTypes {
 }
 
 export const loadArticle = createAction(AppActionTypes.LoadArticle);
-export const articleDataRetrieved = createAction(AppActionTypes.ArticleDataRetrieved, props<{ articleData: string }>());
+export const articleDataRetrieved = createAction(AppActionTypes.ArticleDataRetrieved, props<{ articleData: Article }>());

@@ -16,6 +16,8 @@ import { StoreModule } from "@ngrx/store";
 import { APP_FEATURE_KEY, reducer } from "./store/reducers/app.reducer";
 import { EffectsModule } from "@ngrx/effects";
 import { AppEffects } from "./store/effetcs/app.effects";
+import { provideHttpClient } from "@angular/common/http";
+
 
 @NgModule({
   declarations: [AppComponent, ArticleComponent, TableComponent, WelcomeComponent, SidebarComponent, HeaderComponent, BackgroundsComponent],
@@ -30,6 +32,7 @@ import { AppEffects } from "./store/effetcs/app.effects";
     EffectsModule.forRoot([AppEffects]),
     StoreModule.forFeature(APP_FEATURE_KEY, reducer),
   ],
+  providers: [provideHttpClient()],
   exports: [StoreModule, EffectsModule],
   bootstrap: [AppComponent]
 })

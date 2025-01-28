@@ -5,6 +5,8 @@
   right: 0;
   height: 100%;
   left: 220px;
+  background-color: $color-dark;
+  z-index: -1;
   .image-container {
     display: flex;
     justify-content: space-between;

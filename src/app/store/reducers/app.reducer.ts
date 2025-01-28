@@ -1,11 +1,12 @@
 import { Action, ActionReducerMap, createReducer, on } from "@ngrx/store";
 import { articleDataRetrieved, loadArticle } from "../actions/app.actions";
+import { Article } from "../../shared/model/article";
 
 export const APP_FEATURE_KEY = "app";
 
 export interface AppState {
   tableData: any;
-  articleData?: string;
+  articleData?: Article;
 }
 
 const initialState: AppState = {

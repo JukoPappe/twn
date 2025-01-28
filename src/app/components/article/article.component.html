@@ -1,2 +1,6 @@
-<p>article works!</p>
-<p>{{ articleData | async }}</p>
+<h1>{{(articleData | async)?.title}}</h1>
+<div class="body-text-holder" [innerHTML]="(articleData | async)?.intro"></div>
+<div *ngIf="(articleData | async)?.image?.large" class="image-holder">
+  <img class="logo" [src]="(articleData | async)?.image?.medium">
+</div>
+<div class="body-text-holder" [innerHTML]="(articleData | async)?.body"></div>

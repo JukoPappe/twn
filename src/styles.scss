@@ -41,18 +41,28 @@ $color-dark: #3b3d57;
 $color-link: #3a3d57;
 $color-hover: #03875c;
 
+$sidebar-full-width: 220px;
 $sidebar-width: 170px;
 $header-height: 50px;
+$body-text-margin: 2.5rem 0;
 
 body {
   margin: 0;
-  font-family: BoosterRegular;
+  font-family: BoosterBold;
+  color: #ffffff;
 }
 h1 {
   font-family: BoosterBlack;
   text-transform: uppercase;
+  margin-bottom: 0;
 }
 h2 {
   font-family: BoosterBlack;
   text-transform: uppercase;
+  margin-bottom: 0;
+}
+.body-text-holder {
+  p {
+    margin: $body-text-margin;
+  }
 }

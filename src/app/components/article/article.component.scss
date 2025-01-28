@@ -1,0 +1,15 @@
+@import "../../../styles";
+:host-context {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+}
+.image-holder {
+  height: 60%;
+  width: 60%;
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
