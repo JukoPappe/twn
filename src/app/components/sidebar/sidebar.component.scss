@@ -23,7 +23,7 @@
   // visibility: hidden;
 }
 .link {
-  font-family: BoosterRegular;
+  font-family: BoosterRegular, sans-serif;
   font-size: 1.1875rem;
   text-transform: uppercase;
   color: $color-link;
@@ -45,4 +45,9 @@
 }
 .active-link {
   color: $color-hover;
+  i {
+    width: 24px;
+    transform: scale(1.4);
+    transition: transform 0.25s;
+  }
 }

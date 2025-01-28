@@ -17,10 +17,19 @@ import { APP_FEATURE_KEY, reducer } from "./store/reducers/app.reducer";
 import { EffectsModule } from "@ngrx/effects";
 import { AppEffects } from "./store/effetcs/app.effects";
 import { provideHttpClient } from "@angular/common/http";
-
+import { TableRowComponent } from "./components/table/table-row/table-row.component";
 
 @NgModule({
-  declarations: [AppComponent, ArticleComponent, TableComponent, WelcomeComponent, SidebarComponent, HeaderComponent, BackgroundsComponent],
+  declarations: [
+    AppComponent,
+    ArticleComponent,
+    TableComponent,
+    WelcomeComponent,
+    SidebarComponent,
+    HeaderComponent,
+    BackgroundsComponent,
+    TableRowComponent
+  ],
   imports: [
     CommonModule,
     RouterModule,
