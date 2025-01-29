@@ -14,8 +14,13 @@ import { TableData } from "../../shared/model/table";
 })
 export class TableComponent {
   tableData: Observable<TableData | undefined>;
+  paginationIndex = 1;
   constructor(private readonly store: Store<AppState>) {
     this.store.dispatch(loadTableData());
     this.tableData = this.store.select(getTableData);
+  }
+
+  paginate = (toPage: number): void => {
+    this.paginationIndex = toPage;
   }
 }

@@ -18,6 +18,9 @@ import { EffectsModule } from "@ngrx/effects";
 import { AppEffects } from "./store/effetcs/app.effects";
 import { provideHttpClient } from "@angular/common/http";
 import { TableRowComponent } from "./components/table/table-row/table-row.component";
+import { PaginatePipe } from "./shared/pipes/paginate.pipe";
+import { PaginatorComponent } from "./components/table/paginator/paginator.component";
+import { PaginatorPagesPipe } from "./shared/pipes/paginator-pages.pipe";
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { TableRowComponent } from "./components/table/table-row/table-row.compon
     SidebarComponent,
     HeaderComponent,
     BackgroundsComponent,
-    TableRowComponent
+    TableRowComponent,
+    PaginatorComponent,
+    PaginatePipe,
+    PaginatorPagesPipe
   ],
   imports: [
     CommonModule,
@@ -39,10 +45,10 @@ import { TableRowComponent } from "./components/table/table-row/table-row.compon
     FontAwesomeModule,
     StoreModule.forRoot(reducer, {}),
     EffectsModule.forRoot([AppEffects]),
-    StoreModule.forFeature(APP_FEATURE_KEY, reducer),
+    StoreModule.forFeature(APP_FEATURE_KEY, reducer)
   ],
   providers: [provideHttpClient()],
-  exports: [StoreModule, EffectsModule],
+  exports: [StoreModule, EffectsModule, PaginatePipe, PaginatorPagesPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

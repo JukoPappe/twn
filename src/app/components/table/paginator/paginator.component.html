@@ -1,0 +1,20 @@
+<div class="paginator-wrapper">
+  <span
+    class="navigator"
+    [ngClass]="{ 'navigator-disabled' : paginationIndex === 1 }"
+    (click)="paginate(paginationIndex - 1)">
+    <i class="fa-solid fa-chevron-left"></i>
+  </span>
+  <span class="navigator"
+        *ngFor="let pageNumber of _numberOfPages | paginatorPages : paginationIndex"
+        [ngClass]="{ 'navigator-active' : pageNumber === paginationIndex }"
+        (click)="paginate(pageNumber)">
+    {{ pageNumber }}
+  </span>
+  <span
+    class="navigator"
+    [ngClass]="{ 'navigator-disabled' : paginationIndex === _numberOfPages }"
+    (click)="paginate(paginationIndex + 1)">
+    <i class="fa-solid fa-chevron-right"></i>
+  </span>
+</div>

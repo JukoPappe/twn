@@ -1,0 +1,37 @@
+@import "../../../../styles";
+
+.paginator-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.navigator {
+  height: 2.5em;
+  width: 2.5em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: transparent 1px solid;
+  border-radius: 2.5em;
+  margin-right: 16px;
+  &:last-child {
+    margin-right: 0;
+  }
+  &:hover {
+    border: $color-white 1px solid;
+    cursor: pointer;
+  }
+}
+
+.navigator-disabled {
+  opacity: .4;
+  pointer-events: none;
+  border: none;
+}
+
+.navigator-active {
+  background: $color-white;
+  color: $color-black;
+}

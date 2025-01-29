@@ -1,5 +1,5 @@
 <h1>Nimekiri</h1>
-<div *ngIf="(tableData | async)?.list as articles">
+<div class="table-container" *ngIf="(tableData | async)?.list as articles">
   <table>
     <thead>
       <tr>
@@ -12,10 +12,15 @@
     </thead>
     <tbody>
     <!-- Create table rows dynamically based on data input -->
-    <tr *ngFor="let article of articles">
+    <tr *ngFor="let article of articles | paginate : paginationIndex">
       <app-table-row [article]="article"></app-table-row>
     </tr>
     </tbody>
   </table>
+  <app-paginator
+    [paginationIndex]="paginationIndex"
+    [numberOfPages]="articles.length / 10"
+    (paginateTo)="paginate($event)">
+  </app-paginator>
 </div>
 
