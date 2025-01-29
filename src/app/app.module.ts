@@ -21,6 +21,7 @@ import { TableRowComponent } from "./components/table/table-row/table-row.compon
 import { PaginatePipe } from "./shared/pipes/paginate.pipe";
 import { PaginatorComponent } from "./components/table/paginator/paginator.component";
 import { PaginatorPagesPipe } from "./shared/pipes/paginator-pages.pipe";
+import { TableHeaderComponent } from "./components/table/table-header/table-header.component";
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { PaginatorPagesPipe } from "./shared/pipes/paginator-pages.pipe";
     HeaderComponent,
     BackgroundsComponent,
     TableRowComponent,
+    TableHeaderComponent,
     PaginatorComponent,
     PaginatePipe,
     PaginatorPagesPipe

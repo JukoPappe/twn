@@ -1,0 +1,10 @@
+<th *ngFor="let header of tableHeader">
+  <span class="column-name-container" (click)="sortTable(header.articleReference)">
+    {{ header.name }}
+    <span class="column-icon-container">
+      <i class="fa-solid fa-caret-up" [ngClass]="{ 'hidden' : sortedColumn === header.articleReference && activeSortType === SortingType.ASC }"></i>
+      <i class="fa-solid fa-caret-down" [ngClass]="{ 'hidden' : sortedColumn === header.articleReference && activeSortType === SortingType.DESC }"></i>
+    </span>
+  </span>
+</th>
+<th>Telefon</th>

@@ -5,3 +5,4 @@ const getAppState = createFeatureSelector<AppState>(APP_FEATURE_KEY);
 
 export const getArticleData = createSelector(getAppState, (state: AppState) => state.articleData);
 export const getTableData = createSelector(getAppState, (state: AppState) => state.tableData);
+export const getIsLoading = createSelector(getAppState, (state: AppState) => state.isLoading);

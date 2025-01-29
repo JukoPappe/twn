@@ -30,14 +30,32 @@ tr:nth-child(even) {
 
 th {
   text-align: left;
-  padding: 5px 20px 5px 10px;
+  padding: 10px 20px 10px 10px;
   background: $color-black;
   border-bottom: $color-white .0625rem solid;
 }
 
 td {
-  padding: 5px 20px 5px 10px;
+  padding: 10px 20px 10px 10px;
   white-space: nowrap;
   border-bottom: $color-white .0625rem solid;
   font-family: BoosterRegular, sans-serif;
+  width: 20%;
+}
+
+.column-name-container {
+  display: inline-flex;
+}
+
+.column-icon-container {
+  display: inline-flex;
+  flex-direction: column;
+  padding-left: 10px;
+  i {
+    height: 7px;
+  }
+}
+
+.hidden {
+  visibility: hidden;
 }
