@@ -1,6 +1,6 @@
 <td>{{ article?.firstname }}</td>
 <td>{{ article?.surname }}</td>
-<td>{{ article?.sex }}</td>
-<td>{{ article?.date }}</td>
+<td>{{ article ? (article.sex | gender) : '' }}</td>
+<td>{{ article ? (article.date | date) : '' }}</td>
 <td>{{ article?.phone }}</td>
 

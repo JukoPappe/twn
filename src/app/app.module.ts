@@ -23,6 +23,8 @@ import { PaginatorComponent } from "./components/table/paginator/paginator.compo
 import { PaginatorPagesPipe } from "./shared/pipes/paginator-pages.pipe";
 import { TableHeaderComponent } from "./components/table/table-header/table-header.component";
 import { SpinnerComponent } from "./components/spinner/spinner.component";
+import { GenderPipe } from "./shared/pipes/gender.pipe";
+import { DatePipe } from "./shared/pipes/date.pipe";
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { SpinnerComponent } from "./components/spinner/spinner.component";
     PaginatorComponent,
     PaginatePipe,
     PaginatorPagesPipe,
-    SpinnerComponent
+    SpinnerComponent,
+    GenderPipe,
+    DatePipe
   ],
   imports: [
     CommonModule,
@@ -52,7 +56,7 @@ import { SpinnerComponent } from "./components/spinner/spinner.component";
     StoreModule.forFeature(APP_FEATURE_KEY, reducer)
   ],
   providers: [provideHttpClient()],
-  exports: [StoreModule, EffectsModule, PaginatePipe, PaginatorPagesPipe],
+  exports: [StoreModule, EffectsModule, PaginatePipe, PaginatorPagesPipe, GenderPipe, DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
