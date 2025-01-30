@@ -1,4 +1,4 @@
-@import "../../../styles";
+@use "../../../styles";
 
 :host-context {
   display: flex;
@@ -78,7 +78,7 @@
   width: 100%;
   .tag {
     padding: .5rem 1rem;;
-    background: $color-tag;
+    background: styles.$color-tag;
     margin-right: 15px;
     border-radius: 2rem;
     &:last-child {

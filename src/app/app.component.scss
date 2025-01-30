@@ -1,4 +1,4 @@
-@import "../styles";
+@use "../styles";
 .layout {
   display: flex;
 }
@@ -11,11 +11,11 @@
   top: 0;
   left: 0;
   background-color: white;
-  width: $sidebar-full-width;
+  width: styles.$sidebar-full-width;
 }
 .main {
   flex: auto;
-  margin-left: $sidebar-full-width;
+  margin-left: styles.$sidebar-full-width;
   background-color: transparent;
   padding: 80px 1.5rem;
 }
@@ -42,6 +42,6 @@
   }
   .floating-layout {
     display: block;
-    z-index: 1;
+    z-index: 2;
   }
 }

@@ -1,11 +1,11 @@
-@import "../../../styles";
+@use "../../../styles";
 .background-images {
   position: fixed;
   top: 0;
   right: 0;
   height: 100%;
   left: 220px;
-  background-color: $color-dark;
+  background-color: styles.$color-dark;
   z-index: -1;
   .image-container {
     display: flex;
@@ -33,7 +33,7 @@
 }
 @media (max-width: 960px) {
   .background-images {
-    top: $header-height;
+    top: styles.$header-height;
     left: 0;
   }
 }

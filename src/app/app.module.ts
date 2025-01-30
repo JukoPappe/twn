@@ -22,6 +22,7 @@ import { PaginatePipe } from "./shared/pipes/paginate.pipe";
 import { PaginatorComponent } from "./components/table/paginator/paginator.component";
 import { PaginatorPagesPipe } from "./shared/pipes/paginator-pages.pipe";
 import { TableHeaderComponent } from "./components/table/table-header/table-header.component";
+import { SpinnerComponent } from "./components/spinner/spinner.component";
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { TableHeaderComponent } from "./components/table/table-header/table-head
     TableHeaderComponent,
     PaginatorComponent,
     PaginatePipe,
-    PaginatorPagesPipe
+    PaginatorPagesPipe,
+    SpinnerComponent
   ],
   imports: [
     CommonModule,

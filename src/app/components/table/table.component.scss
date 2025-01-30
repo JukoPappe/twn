@@ -1,4 +1,4 @@
-@import "../../../styles";
+@use "../../../styles";
 
 :host-context {
   display: flex;
@@ -31,14 +31,14 @@ tr:nth-child(even) {
 th {
   text-align: left;
   padding: 10px 20px 10px 10px;
-  background: $color-black;
-  border-bottom: $color-white .0625rem solid;
+  background: styles.$color-black;
+  border-bottom: styles.$color-white .0625rem solid;
 }
 
 td {
   padding: 10px 20px 10px 10px;
   white-space: nowrap;
-  border-bottom: $color-white .0625rem solid;
+  border-bottom: styles.$color-white .0625rem solid;
   font-family: BoosterRegular, sans-serif;
   width: 20%;
 }

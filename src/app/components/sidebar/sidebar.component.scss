@@ -1,11 +1,13 @@
-@import "../../../styles";
+@use "../../../styles";
+$header-height: styles.$header-height;
+
 .side-menu {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   height: calc(100vh - $header-height);
   padding: 1.5625rem;
-  width: $sidebar-width;
+  width: styles.$sidebar-width;
 }
 .floating-layout {
   display: flex;
@@ -13,7 +15,7 @@
   left: 0;
   top: 50px;
   height: 100vh;
-  width: $sidebar-width;
+  width: styles.$sidebar-width;
   background: white;
 }
 
@@ -24,7 +26,7 @@
   font-family: BoosterRegular, sans-serif;
   font-size: 1.1875rem;
   text-transform: uppercase;
-  color: $color-link;
+  color: styles.$color-link;
   padding: 0.7rem 0 0.7rem 0;
   i {
     transition: transform 0.25s;
@@ -33,7 +35,7 @@
     text-align: center;
   }
   &:hover {
-    color: $color-hover;
+    color: styles.$color-hover;
     i {
       transition: transform 0.25s;
       transform: scale(1.4);
@@ -42,7 +44,7 @@
   }
 }
 .active-link {
-  color: $color-hover;
+  color: styles.$color-hover;
   i {
     width: 24px;
     transform: scale(1.4);

@@ -1,4 +1,4 @@
-@import "../../../../styles";
+@use "../../../../styles";
 
 .paginator-wrapper {
   display: flex;
@@ -20,7 +20,7 @@
     margin-right: 0;
   }
   &:hover {
-    border: $color-white 1px solid;
+    border: styles.$color-white 1px solid;
     cursor: pointer;
   }
 }
@@ -32,6 +32,6 @@
 }
 
 .navigator-active {
-  background: $color-white;
-  color: $color-black;
+  background: styles.$color-white;
+  color: styles.$color-black;
 }

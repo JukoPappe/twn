@@ -1,8 +1,9 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-import { Observable } from "rxjs";
+import { delay, Observable } from "rxjs";
 import { ALL_ARTICLES_API, TableData, TableSorting } from "../../shared/model/table";
 import { Article } from "../../shared/model/article";
+import { TEST_SPINNER_WITH_DELAY } from "../../app.config";
 
 @Injectable({
   providedIn: "root"
@@ -11,7 +12,7 @@ export class TableService {
   constructor(private http: HttpClient) {}
 
   getAllArticles = (): Observable<Object> => {
-    return this.http.get(ALL_ARTICLES_API);
+    return this.http.get(ALL_ARTICLES_API).pipe(delay(TEST_SPINNER_WITH_DELAY));
   }
 
   sortTable = (tableData: TableData, column: keyof Article, sortType: TableSorting) => {
