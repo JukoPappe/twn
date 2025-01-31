@@ -1,16 +1,21 @@
 <div class="container">
   <div class="layout body-text-holder">
     <h2>Juko Pappe</h2>
-    <h1>Proovitöö!</h1>
+    <h1 class="title">Proovitöö!</h1>
     <p>
       Proovitöö on tehtud nx workspaces!
       Oma teadmiste näitamiseks ngrx'ist kasutasin store ülesehitust, et andmeid kuvada.
-      Disainimisel proovisin võimalikult palju kasutada flex kujundust.
+      Disainimisel proovisin võimalikult palju kasutada flex kujundust ja teie disaini.
     </p>
     <p>
       Lisatud on ka spinner andmete laadimise ajaks.
-      Võib juhtuda, et andmete kiire laadimise tõttu ei ole spinner nähtav, selliseks juhuks olen lisanud andmete laadimise
-      serveri call´idele delay võimaluse. Seda saab muuta läbi muutuja TEST_SPINNER_WITH_DELAY, mille leiab app.config.ts failist.
+      Kuna võib juhtuda, et andmete kiire laadimise tõttu ei ole spinner nähtav, siis selliseks juhuks olen lisanud andmete laadimise
+      serveri call´idele delay. Seda saab muuta läbi muutuja TEST_SPINNER_WITH_DELAY, mille leiab app.config.ts failist.
+      Delay lisasin lihtsalt läbi http get kutsungite külge pannes .pipe(delay(TEST_SPINNER_WITH_DELAY)).
+    </p>
+    <p>
+      Lisasin ka mõned unit testid. Need saab jooksutada läbi package.jsoni scriptide.
+      Testid lisasin artikkli komponendile ja tabeli lehekülje jaotuse komponendile.
     </p>
   </div>
 </div>

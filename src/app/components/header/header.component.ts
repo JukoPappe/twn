@@ -14,7 +14,7 @@ export class HeaderComponent {
 
   btnIcon = this.BURGER_ICON;
 
-  sideBarOpen: boolean = false;
+  sideBarOpen = false;
   @HostListener('window:resize', ['$event'])
   onResize() {
     if (window.innerWidth > 990) {

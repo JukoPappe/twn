@@ -1,5 +1,5 @@
 <div class="side-menu" [ngClass]="{ 'floating-layout': floatingSidebar }">
-  <img *ngIf="!floatingSidebar" alt="sidebar-logo" class="logo" src="assets/imgs/logo.svg">
+  <img *ngIf="!floatingSidebar" routerLink="/" alt="sidebar-logo" class="logo" src="assets/imgs/logo.svg">
   <a class="link" routerLinkActive="active-link" [routerLinkActiveOptions]="routerLinkConfig" routerLink="/">tutvustus<i class="fa-solid fa-house"></i></a>
   <a class="link" routerLinkActive="active-link" [routerLinkActiveOptions]="routerLinkConfig" routerLink="/article">artikkel<i class="fa fa-file fa-md"></i></a>
   <a class="link" routerLinkActive="active-link" [routerLinkActiveOptions]="routerLinkConfig" routerLink="/table">tabel<i class="fa fa-table fa-md"></i></a>

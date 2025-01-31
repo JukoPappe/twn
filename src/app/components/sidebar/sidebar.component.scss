@@ -21,6 +21,9 @@ $header-height: styles.$header-height;
 
 .logo {
   margin: 1.5625rem 0 3.125rem;
+  &:hover {
+    cursor: pointer;
+  }
 }
 .link {
   font-family: BoosterRegular, sans-serif;

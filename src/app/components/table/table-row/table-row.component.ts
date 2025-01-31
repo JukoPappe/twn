@@ -11,7 +11,7 @@ export class TableRowComponent {
   @Input()
   article?: Article;
   @Input()
-  showArticle: boolean = false;
+  showArticle = false;
 
   @Output()
   openArticle = new EventEmitter();
