@@ -1,7 +1,7 @@
 <div class="container">
   <div class="layout body-text-holder">
-    <h2>Juko Pappe</h2>
-    <h1 class="title">Proovitöö!</h1>
+    <h2 test-id="name">Juko Pappe</h2>
+    <h1 class="title" test-id="header">Proovitöö!</h1>
     <p>
       Proovitöö on tehtud nx workspaces!
       Oma teadmiste näitamiseks ngrx'ist kasutasin store ülesehitust, et andmeid kuvada.
@@ -14,8 +14,12 @@
       Delay lisasin lihtsalt läbi http get kutsungite külge pannes .pipe(delay(TEST_SPINNER_WITH_DELAY)).
     </p>
     <p>
-      Lisasin ka mõned unit testid. Need saab jooksutada läbi package.jsoni scriptide.
+      Kirjutasin ka mõned unit testid. Need saab jooksutada läbi package.jsoni scriptide.
       Testid lisasin artikkli komponendile ja tabeli lehekülje jaotuse komponendile.
+    </p>
+    <p>
+      Seadsin üles ka paar e2e testi cypressiga. Need saab alustada jooksutades cypress open käsklus e2e folderis.
+      Testid on kirjutatud chrome browseri jaoks.
     </p>
   </div>
 </div>

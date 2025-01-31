@@ -54,3 +54,12 @@ $header-height: styles.$header-height;
     transition: transform 0.25s;
   }
 }
+
+@media (max-width: styles.$small-screen-view) {
+  .side-menu {
+    padding-top: 2.5rem;
+  }
+  .link {
+    font-size: 1rem;
+  }
+}

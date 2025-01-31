@@ -1,13 +1,21 @@
-import { getGreeting } from '../support/app.po';
+import { clickButton, expectElementToContain } from "../support/app.po";
+import { ServiceCalls} from "../support/service-calls";
+
+const serviceCall = new ServiceCalls();
 
 describe('e2e', () => {
   beforeEach(() => cy.visit('/'));
 
-  it('should display welcome message', () => {
-    // Custom command example, see `../support/commands.ts` file
-    cy.login('my-email@something.com', 'myPassword');
+  it('should display header and name on welcome screen', () => {
+    expectElementToContain('header', 'PROOVITÖÖ!');
+    expectElementToContain('name', 'JUKO PAPPE');
+  });
 
-    // Function helper example, see `../support/app.po.ts` file
-    getGreeting().contains(/Welcome/);
+  it('should navigate to article and have intro and body', () => {
+    serviceCall.stubArticleData();
+    clickButton("article");
+    serviceCall.waitOnArticleData();
+    cy.get("p").contains('INTRO');
+    cy.get("p").contains('BODY');
   });
 });
