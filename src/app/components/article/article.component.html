@@ -5,7 +5,7 @@
     <img alt="background-image" class="background-image" [src]="(articleData | async)?.image?.medium">
   </div>
   <div class="image-holder">
-    <img alt="image" [src]="(articleData | async)?.image?.medium">
+    <img alt="article-image" [src]="(articleData | async)?.image?.medium">
   </div>
   <div class="image-title">{{(articleData | async)?.title}}</div>
 </div>

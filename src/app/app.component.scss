@@ -21,7 +21,7 @@
 }
 
 /* Smaller screen styles */
-@media (max-width: 960px) {
+@media (max-width: styles.$small-screen-view) {
   .layout {
     flex-direction: column;
   }

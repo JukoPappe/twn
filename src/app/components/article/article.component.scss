@@ -62,7 +62,7 @@
   }
 
   /* Smaller screen styles */
-  @media (max-width: 960px) {
+  @media (max-width: styles.$small-screen-view) {
     .image-title {
       height: 5vw;
     }

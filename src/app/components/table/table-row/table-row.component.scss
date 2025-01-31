@@ -1,4 +1,40 @@
+@use "../../../../styles";
 @use "../table.component";
+
 :host {
   display: contents;
+}
+
+tr {
+  background-color: inherit;
+}
+
+tr:hover {
+  cursor: pointer;
+}
+
+.open-article {
+  background-color: styles.$color-white;
+  color: styles.$color-black;
+}
+
+img {
+  margin-left: 6px;
+  width: 12.5rem;
+  height: 12.5rem;
+}
+
+.article-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-holder {
+  text-wrap: initial;
+  margin-left: 1rem;
 }

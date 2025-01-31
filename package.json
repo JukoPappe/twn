@@ -5,7 +5,8 @@
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test"
+    "test-article-component": "nx test --test-file=article.component.spec.ts",
+    "test-paginator-component": "nx test --test-file=paginator.component.spec.ts"
   },
   "private": true,
   "dependencies": {

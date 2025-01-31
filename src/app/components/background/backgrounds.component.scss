@@ -31,7 +31,7 @@
     width: 30vh;
   }
 }
-@media (max-width: 960px) {
+@media (max-width: styles.$small-screen-view) {
   .background-images {
     top: styles.$header-height;
     left: 0;

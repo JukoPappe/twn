@@ -48,20 +48,21 @@ $sidebar-full-width: 220px;
 $sidebar-width: 170px;
 $header-height: 50px;
 $body-text-margin: 2.5rem 0;
+$small-screen-view: 990px;
 
 
 body {
   margin: 0;
-  font-family: BoosterBold;
+  font-family: BoosterBold, sans-serif;
   color: #ffffff;
 }
 h1 {
-  font-family: BoosterBlack;
+  font-family: BoosterBlack, sans-serif;
   text-transform: uppercase;
   margin-bottom: 0;
 }
 h2 {
-  font-family: BoosterBlack;
+  font-family: BoosterBlack, sans-serif;
   text-transform: uppercase;
   margin-bottom: 0;
 }
@@ -69,5 +70,10 @@ h2 {
   max-width: 1000px;
   p {
     margin: $body-text-margin;
+  }
+}
+.text-holder {
+  p {
+    margin: 0 0 $body-text-margin;
   }
 }

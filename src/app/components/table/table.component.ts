@@ -16,6 +16,7 @@ import { Article } from "../../shared/model/article";
 export class TableComponent {
   tableData: Observable<TableData>;
   paginationIndex = 1;
+  openArticle?: number;
 
   constructor(private readonly store: Store<AppState>) {
     this.store.dispatch(loadTableData());
@@ -24,9 +25,26 @@ export class TableComponent {
 
   sortTable = (event: { column: keyof Article, sortType: TableSorting }): void => {
     this.store.dispatch(sortTable(event));
+    this.closeAllArticles();
   }
 
   paginate = (toPage: number): void => {
-    this.paginationIndex = toPage;
+    if (this.paginationIndex !== toPage) {
+      this.paginationIndex = toPage;
+      this.closeAllArticles();
+    }
+
+  }
+
+  articleOpened = (index: number): void => {
+    if (this.openArticle !== index) {
+      this.openArticle = index;
+    } else {
+      this.closeAllArticles();
+    }
+  }
+
+  closeAllArticles = (): void => {
+    this.openArticle = undefined;
   }
 }

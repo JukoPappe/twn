@@ -24,7 +24,7 @@ table {
   border-collapse: collapse;
 }
 
-tr:nth-child(even) {
+app-table-row:nth-child(even) {
   background-color: rgb(255, 255, 255, .1);
 }
 

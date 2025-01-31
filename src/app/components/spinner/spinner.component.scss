@@ -1,3 +1,4 @@
+@use "../../../styles";
 :host-context {
   display: flex;
   position: fixed;
@@ -8,7 +9,7 @@
   filter: blur(.025rem);
   background-color: rgba(23, 22, 22, 0.56);
   z-index: 1;
-  @media (max-width: 960px) {
+  @media (max-width: styles.$small-screen-view) {
     top: 50px;
     left: 0;
     height: calc(100% - 50px);

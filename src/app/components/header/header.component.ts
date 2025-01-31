@@ -14,21 +14,27 @@ export class HeaderComponent {
 
   btnIcon = this.BURGER_ICON;
 
+  sideBarOpen: boolean = false;
   @HostListener('window:resize', ['$event'])
   onResize() {
-    if (window.innerWidth > 960) {
+    if (window.innerWidth > 990) {
       this.btnIcon = this.BURGER_ICON;
       this.sidebarToggled.emit(false);
+    } else {
+      this.btnIcon = this.sideBarOpen ? this.X_ICON : this.BURGER_ICON;
+      this.sidebarToggled.emit(this.sideBarOpen);
     }
   }
 
   openSidebar = (): void => {
-    if (this.btnIcon === this.BURGER_ICON) {
+    if (!this.sideBarOpen) {
       this.btnIcon = this.X_ICON;
-      this.sidebarToggled.emit(true);
+      this.sideBarOpen = true;
+      this.sidebarToggled.emit(this.sideBarOpen);
     } else {
       this.btnIcon = this.BURGER_ICON;
-      this.sidebarToggled.emit(false);
+      this.sideBarOpen = false;
+      this.sidebarToggled.emit(this.sideBarOpen);
     }
   }
 }
