@@ -24,6 +24,7 @@ module.exports = [
   {
     files: ['**/*.ts'],
     rules: {
+      '@angular-eslint/prefer-standalone': ['warn'],
       '@angular-eslint/directive-selector': [
         'error',
         {

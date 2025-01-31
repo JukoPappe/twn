@@ -30,7 +30,7 @@ export class AppEffects {
         this.store$.dispatch(loadingData());
         return this.articleService.getArticle();
       }),
-      switchMap((response: Object) => [
+      switchMap((response: object) => [
         dataLoaded(),
         articleDataRetrieved({ articleData: response as Article})
       ])
@@ -44,7 +44,7 @@ export class AppEffects {
         this.store$.dispatch(loadingData());
         return this.tableService.getAllArticles();
       }),
-      switchMap((response: Object) => [
+      switchMap((response: object) => [
         dataLoaded(),
         tableDataRetrieved({ tableData: response as TableData })
       ])
@@ -56,10 +56,7 @@ export class AppEffects {
       ofType(sortTable),
       withLatestFrom(this.store$.select(getTableData)),
       map(([action, tableData]) => {
-        console.log(action);
         const sortedData = this.tableService.sortTable(tableData, action.column, action.sortType);
-        console.log(action.sortType !== TableSorting.DEFAULT);
-        console.log(sortedData);
         return action.sortType !== TableSorting.DEFAULT ? setTableDataAfterSorting({ tableData: sortedData  }) : restoreOriginalTableData();
       })
     )

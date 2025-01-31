@@ -2,10 +2,10 @@
 <div class="body-text-holder" [innerHTML]="(articleData | async)?.intro"></div>
 <div *ngIf="(articleData | async)?.image?.large" class="image-container">
   <div class="image-background">
-    <img class="background-image" [src]="(articleData | async)?.image?.medium">
+    <img alt="background-image" class="background-image" [src]="(articleData | async)?.image?.medium">
   </div>
   <div class="image-holder">
-    <img [src]="(articleData | async)?.image?.medium">
+    <img alt="image" [src]="(articleData | async)?.image?.medium">
   </div>
   <div class="image-title">{{(articleData | async)?.title}}</div>
 </div>

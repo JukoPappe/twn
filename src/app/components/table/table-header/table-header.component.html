@@ -1,5 +1,5 @@
 <th *ngFor="let header of tableHeader">
-  <span class="column-name-container" (click)="sortTable(header.articleReference)">
+  <span tabindex="0" class="column-name-container" (keydown.enter)="sortTable(header.articleReference)" (click)="sortTable(header.articleReference)">
     {{ header.name }}
     <span class="column-icon-container">
       <i class="fa-solid fa-caret-up" [ngClass]="{ 'hidden' : sortedColumn === header.articleReference && activeSortType === SortingType.ASC }"></i>

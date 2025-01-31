@@ -10,7 +10,7 @@ import { TEST_SPINNER_WITH_DELAY } from "../../app.config";
 export class ArticleService {
   constructor(private http: HttpClient) {}
 
-  getArticle = (): Observable<Object> => {
+  getArticle = (): Observable<object> => {
     return this.http.get(ARTICLE_API).pipe(delay(TEST_SPINNER_WITH_DELAY));
   }
 }

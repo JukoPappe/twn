@@ -1,19 +1,25 @@
 <div class="paginator-wrapper">
   <span
+    tabindex="0"
     class="navigator"
     [ngClass]="{ 'navigator-disabled' : paginationIndex === 1 }"
+    (keydown.enter)="paginate(paginationIndex - 1)"
     (click)="paginate(paginationIndex - 1)">
     <i class="fa-solid fa-chevron-left"></i>
   </span>
-  <span class="navigator"
+  <span tabindex="0"
+        class="navigator"
         *ngFor="let pageNumber of _numberOfPages | paginatorPages : paginationIndex"
         [ngClass]="{ 'navigator-active' : pageNumber === paginationIndex }"
+        (keydown.enter)="paginate(pageNumber)"
         (click)="paginate(pageNumber)">
     {{ pageNumber }}
   </span>
   <span
+    tabindex="0"
     class="navigator"
     [ngClass]="{ 'navigator-disabled' : paginationIndex === _numberOfPages }"
+    (keydown.enter)="paginate(paginationIndex + 1)"
     (click)="paginate(paginationIndex + 1)">
     <i class="fa-solid fa-chevron-right"></i>
   </span>

@@ -11,7 +11,7 @@ import { TEST_SPINNER_WITH_DELAY } from "../../app.config";
 export class TableService {
   constructor(private http: HttpClient) {}
 
-  getAllArticles = (): Observable<Object> => {
+  getAllArticles = (): Observable<object> => {
     return this.http.get(ALL_ARTICLES_API).pipe(delay(TEST_SPINNER_WITH_DELAY));
   }
 
