@@ -3,7 +3,7 @@
   <td>{{ article?.surname }}</td>
   <td>{{ article ? (article.sex | gender) : '' }}</td>
   <td>{{ article ? (article.date | date) : '' }}</td>
-  <td>{{ article?.phone }}</td>
+  <td>{{ article ? (article.phone | phoneNumber) : '' }}</td>
 </tr>
 <tr *ngIf="showArticle" [ngClass]="{ 'open-article' : showArticle }">
   <td colspan="5">

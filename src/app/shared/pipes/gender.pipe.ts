@@ -6,6 +6,6 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class GenderPipe implements PipeTransform {
   transform(value: string): string {
-    return value === "m" ? "mees" : "naine";
+    return value === "m" ? "Mees" : "Naine";
   }
 }

@@ -26,6 +26,7 @@ import { SpinnerComponent } from "./components/spinner/spinner.component";
 import { GenderPipe } from "./shared/pipes/gender.pipe";
 import { DatePipe } from "./shared/pipes/date.pipe";
 import { TruncateTextPipe } from "./shared/pipes/truncate-text.pipe";
+import { PhoneNumberPipe } from "./shared/pipes/phone-number.pipe";
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { TruncateTextPipe } from "./shared/pipes/truncate-text.pipe";
     SpinnerComponent,
     GenderPipe,
     DatePipe,
-    TruncateTextPipe
+    TruncateTextPipe,
+    PhoneNumberPipe
   ],
   imports: [
     CommonModule,
@@ -58,7 +60,7 @@ import { TruncateTextPipe } from "./shared/pipes/truncate-text.pipe";
     StoreModule.forFeature(APP_FEATURE_KEY, reducer)
   ],
   providers: [provideHttpClient()],
-  exports: [StoreModule, EffectsModule, PaginatePipe, PaginatorPagesPipe, GenderPipe, DatePipe, TruncateTextPipe],
+  exports: [StoreModule, EffectsModule, PaginatePipe, PaginatorPagesPipe, GenderPipe, DatePipe, TruncateTextPipe, PhoneNumberPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
