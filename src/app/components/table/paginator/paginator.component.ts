@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from "@angular/core";
+import { Component, EventEmitter, Input, Output, signal } from "@angular/core";
 
 @Component({
   selector: 'app-paginator',
@@ -7,20 +7,16 @@ import { Component, EventEmitter, Input, Output } from "@angular/core";
   standalone: false
 })
 export class PaginatorComponent {
-  private _numberOfPages = 0;
+  pageCount = 0;
 
   @Input()
   paginationIndex = 1;
 
   @Input()
   set numberOfPages(input: number) {
-    this._numberOfPages = Math.ceil(input);
+    this.pageCount = Math.ceil(input);
   };
 
-  get numberOfPages(): number {
-    return this._numberOfPages;
-
-  }
   @Output()
   paginateTo = new EventEmitter<number>();
 

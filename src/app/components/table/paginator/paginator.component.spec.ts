@@ -22,9 +22,9 @@ describe('PaginatorComponent', () => {
 
   it("should always round up the number when setting _numberOfPages", () => {
     component.numberOfPages = 2.1;
-    expect(component.numberOfPages).toBe(3);
+    expect(component.pageCount).toBe(3);
     component.numberOfPages = 1.9;
-    expect(component.numberOfPages).toBe(2);
+    expect(component.pageCount).toBe(2);
   });
 
   it("should emit event while paginating", () => {

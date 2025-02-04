@@ -9,7 +9,7 @@
   </span>
   <span tabindex="0"
         class="navigator"
-        *ngFor="let pageNumber of numberOfPages | paginatorPages : paginationIndex"
+        *ngFor="let pageNumber of pageCount | paginatorPages : paginationIndex"
         [ngClass]="{ 'navigator-active' : pageNumber === paginationIndex }"
         (keydown.enter)="paginate(pageNumber)"
         (click)="paginate(pageNumber)">
@@ -18,7 +18,7 @@
   <span
     tabindex="0"
     class="navigator"
-    [ngClass]="{ 'navigator-disabled' : paginationIndex === numberOfPages }"
+    [ngClass]="{ 'navigator-disabled' : paginationIndex === pageCount }"
     (keydown.enter)="paginate(paginationIndex + 1)"
     (click)="paginate(paginationIndex + 1)">
     <i class="fa-solid fa-chevron-right"></i>
