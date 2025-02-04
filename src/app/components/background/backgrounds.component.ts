@@ -4,6 +4,5 @@ import { Component } from '@angular/core';
   selector: 'app-backgrounds',
   templateUrl: './backgrounds.component.html',
   styleUrl: './backgrounds.component.scss',
-  standalone: false
 })
 export class BackgroundsComponent {}

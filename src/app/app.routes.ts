@@ -2,12 +2,11 @@ import { NgModule } from "@angular/core";
 import { Route, RouterModule } from "@angular/router";
 import { ArticleComponent } from "./components/article/article.component";
 import { TableComponent } from "./components/table/table.component";
-import { WelcomeComponent } from "./components/welcome/welcome.component";
 
 export const appRoutes: Route[] = [
   {
     path: "",
-    component: WelcomeComponent
+    loadComponent: () => import('./components/welcome/welcome.component').then(component => component.WelcomeComponent)
   },
   {
     path: "article",

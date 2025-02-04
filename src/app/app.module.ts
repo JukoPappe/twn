@@ -8,7 +8,6 @@ import { RoutesModule } from "./app.routes";
 import { TableComponent } from "./components/table/table.component";
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
-import { WelcomeComponent } from "./components/welcome/welcome.component";
 import { SidebarComponent } from "./components/sidebar/sidebar.component";
 import { HeaderComponent } from "./components/header/header.component";
 import { BackgroundsComponent } from "./components/background/backgrounds.component";
@@ -33,16 +32,13 @@ import { PhoneNumberPipe } from "./shared/pipes/phone-number.pipe";
     AppComponent,
     ArticleComponent,
     TableComponent,
-    WelcomeComponent,
     SidebarComponent,
     HeaderComponent,
-    BackgroundsComponent,
     TableRowComponent,
     TableHeaderComponent,
     PaginatorComponent,
     PaginatePipe,
     PaginatorPagesPipe,
-    SpinnerComponent,
     GenderPipe,
     DatePipe,
     TruncateTextPipe,
@@ -57,7 +53,9 @@ import { PhoneNumberPipe } from "./shared/pipes/phone-number.pipe";
     FontAwesomeModule,
     StoreModule.forRoot(reducer, {}),
     EffectsModule.forRoot([AppEffects]),
-    StoreModule.forFeature(APP_FEATURE_KEY, reducer)
+    StoreModule.forFeature(APP_FEATURE_KEY, reducer),
+    BackgroundsComponent,
+    SpinnerComponent
   ],
   providers: [provideHttpClient()],
   exports: [StoreModule, EffectsModule, PaginatePipe, PaginatorPagesPipe, GenderPipe, DatePipe, TruncateTextPipe, PhoneNumberPipe],
