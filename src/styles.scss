@@ -2,40 +2,39 @@
 @import "~@fortawesome/fontawesome-free/css/all.css";
 @font-face {
   font-family: 'BoosterBlack';
-  src: url('assets/fonts/BoosterNextFY-Black.woff') format('truetype');
+  src: url('assets/fonts/BoosterNextFY-Black.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'BoosterBold';
-  src: url('assets/fonts/BoosterNextFY-Bold.woff') format('truetype');
+  src: url('assets/fonts/BoosterNextFY-Bold.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'BoosterLight';
-  src: url('assets/fonts/BoosterNextFY-Light.woff') format('truetype');
+  src: url('assets/fonts/BoosterNextFY-Light.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'BoosterMedium';
-  src: url('assets/fonts/BoosterNextFY-Medium.woff') format('truetype');
+  src: url('assets/fonts/BoosterNextFY-Medium.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'BoosterRegular';
-  src: url('assets/fonts/BoosterNextFY-Regular.woff') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+  src: url('assets/fonts/BoosterNextFY-Regular.woff') format('woff');
 }
 @font-face {
   font-family: 'BoosterThin';
-  src: url('assets/fonts/BoosterNextFY-Thin.woff') format('truetype');
+  src: url('assets/fonts/BoosterNextFY-Thin.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
+
 
 $color-dark: #3b3d57;
 $color-link: #3a3d57;
@@ -53,7 +52,7 @@ $small-screen-view: 990px;
 
 body {
   margin: 0;
-  font-family: BoosterBold, sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #ffffff;
 }
 h1 {

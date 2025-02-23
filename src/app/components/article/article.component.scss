@@ -35,11 +35,15 @@
     left: 15%;
     height: 100%;
     width: 70%;
+    transition-property: left, top, height, width;
+    transition-duration: 0.3s;
     img {
       height: 100%;
       width: 100%;
     }
     &:hover {
+      transition-property: left, top, height, width;
+      transition-duration: 0.3s;
       top: -10px;
       left: calc(15% - 10px);
       width: calc(70% + 20px);
