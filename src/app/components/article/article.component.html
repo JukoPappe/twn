@@ -1,15 +1,18 @@
-<h1>{{(articleData | async)?.title}}</h1>
-<div class="body-text-holder" [innerHTML]="(articleData | async)?.intro"></div>
-<div *ngIf="(articleData | async)?.image?.large" class="image-container">
-  <div class="image-background">
-    <img alt="background-image" class="background-image" [src]="(articleData | async)?.image?.medium">
+<ng-container *ngIf="articleData | async; let article">
+  <h1>{{article?.title}}</h1>
+  <div class="body-text-holder" [innerHTML]="article?.intro"></div>
+  <div *ngIf="article?.image?.large" class="image-container">
+    <div class="image-background">
+      <img alt="background-image" class="background-image" [src]="article?.image?.medium">
+    </div>
+    <div class="image-holder">
+      <img alt="article-image" [src]="article?.image?.medium">
+    </div>
+    <div class="image-title">{{article?.title}}</div>
   </div>
-  <div class="image-holder">
-    <img alt="article-image" [src]="(articleData | async)?.image?.medium">
+  <div class="body-text-holder" [innerHTML]="article?.body"></div>
+  <div class="body-text-holder tags">
+    <span class="tag"*ngFor="let tag of article?.tags">{{tag}}</span>
   </div>
-  <div class="image-title">{{(articleData | async)?.title}}</div>
-</div>
-<div class="body-text-holder" [innerHTML]="(articleData | async)?.body"></div>
-<div class="body-text-holder tags">
-  <span class="tag"*ngFor="let tag of (articleData | async)?.tags">{{tag}}</span>
-</div>
+</ng-container>
+
