@@ -20,6 +20,11 @@ $header-height: styles.$header-height;
 }
 
 .logo {
+  font-family: BoosterRegular, sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-decoration-line: none;
+  color: styles.$color-link;
   margin: 1.5625rem 0 3.125rem;
   &:hover {
     cursor: pointer;
