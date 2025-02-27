@@ -1,6 +1,6 @@
 import { Article } from "./article";
 
-export const ALL_ARTICLES_API = "https://proovitoo.twn.ee/api/list";
+export const ALL_ARTICLES_API = "https://twn-project-1729c-default-rtdb.europe-west1.firebasedatabase.app/articles.json";
 
 export const MAX_PAGINATOR_ELEMENTS = 5;
 

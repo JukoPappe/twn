@@ -8,7 +8,7 @@
 <tr *ngIf="showArticle" [ngClass]="{ 'open-article' : showArticle }">
   <td colspan="5">
     <div class="article-container">
-      <img alt="article-image" [src]="article?.image?.small">
+      <img alt="article-image" [src]="article?.image">
       <div class="text-container">
         <div class="text-holder" [innerHTML]="article ? (article.body | truncateText : 297) : ''"></div>
       </div>

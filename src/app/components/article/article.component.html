@@ -1,12 +1,12 @@
 <ng-container *ngIf="articleData | async; let article">
   <h1>{{article?.title}}</h1>
   <div class="body-text-holder" [innerHTML]="article?.intro"></div>
-  <div *ngIf="article?.image?.large" class="image-container">
+  <div *ngIf="article?.image" class="image-container">
     <div class="image-background">
-      <img alt="background-image" class="background-image" [src]="article?.image?.medium">
+      <img alt="background-image" class="background-image" [src]="article?.image">
     </div>
     <div class="image-holder">
-      <img alt="article-image" [src]="article?.image?.medium">
+      <img alt="article-image" [src]="article?.image">
     </div>
     <div class="image-title">{{article?.title}}</div>
   </div>
