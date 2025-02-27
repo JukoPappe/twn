@@ -17,7 +17,6 @@
 .main {
   flex: auto;
   margin-left: styles.$sidebar-full-width;
-  // background-color: transparent;
   padding: 80px 1.5rem;
 
   background-image: url('../assets/imgs/bg-deco-left.svg'), url('../assets/imgs/bg-deco-right.svg');
@@ -52,5 +51,12 @@
   .floating-layout {
     display: block;
     z-index: 2;
+  }
+}
+
+/* Mobile screen view */
+@media (max-width: styles.$mobile-view) {
+  .main {
+    background-size: 150px, 300px;
   }
 }
