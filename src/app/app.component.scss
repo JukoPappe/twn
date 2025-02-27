@@ -1,6 +1,7 @@
 @use "../styles";
 .layout {
   display: flex;
+  height: 100%;
 }
 .header {
   display: none;
@@ -16,8 +17,14 @@
 .main {
   flex: auto;
   margin-left: styles.$sidebar-full-width;
-  background-color: transparent;
+  // background-color: transparent;
   padding: 80px 1.5rem;
+
+  background-image: url('../assets/imgs/bg-deco-left.svg'), url('../assets/imgs/bg-deco-right.svg');
+  background-repeat: no-repeat;
+  background-color: styles.$color-dark;
+  background-position: 1% bottom, 99% 5px;
+  background-size: 200px, 400px;
 }
 
 /* Smaller screen styles */
@@ -38,8 +45,9 @@
     display: none;
   }
   .main {
+    margin-top: 50px;
     margin-left: 0;
-    padding: 7.5rem 1.5rem;
+    padding: 70px 1.5rem 0;
   }
   .floating-layout {
     display: block;

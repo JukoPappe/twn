@@ -10,7 +10,6 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { SidebarComponent } from "./components/sidebar/sidebar.component";
 import { HeaderComponent } from "./components/header/header.component";
-import { BackgroundsComponent } from "./components/background/backgrounds.component";
 import { StoreModule } from "@ngrx/store";
 import { APP_FEATURE_KEY, reducer } from "./store/reducers/app.reducer";
 import { EffectsModule } from "@ngrx/effects";
@@ -42,7 +41,8 @@ import { PhoneNumberPipe } from "./shared/pipes/phone-number.pipe";
     GenderPipe,
     DatePipe,
     TruncateTextPipe,
-    PhoneNumberPipe
+    PhoneNumberPipe,
+    SpinnerComponent
   ],
   imports: [
     CommonModule,
@@ -53,9 +53,7 @@ import { PhoneNumberPipe } from "./shared/pipes/phone-number.pipe";
     FontAwesomeModule,
     StoreModule.forRoot(reducer, {}),
     EffectsModule.forRoot([AppEffects]),
-    StoreModule.forFeature(APP_FEATURE_KEY, reducer),
-    BackgroundsComponent,
-    SpinnerComponent
+    StoreModule.forFeature(APP_FEATURE_KEY, reducer)
   ],
   providers: [provideHttpClient()],
   exports: [StoreModule, EffectsModule, PaginatePipe, PaginatorPagesPipe, GenderPipe, DatePipe, TruncateTextPipe, PhoneNumberPipe],

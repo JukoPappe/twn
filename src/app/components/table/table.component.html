@@ -1,11 +1,11 @@
 <h1>Nimekiri</h1>
-<ng-container *ngIf="(tableData | async)?.list as articles">
+<ng-container *ngIf="(articleList | async) as articles">
   <div class="table-container">
     <table>
       <thead>
-      <tr>
-        <app-table-header (sortEvent)="sortTable($event)"></app-table-header>
-      </tr>
+        <tr>
+          <app-table-header (sortEvent)="sortTable($event)"></app-table-header>
+        </tr>
       </thead>
       <tbody>
       <!-- Create table rows dynamically based on data input -->

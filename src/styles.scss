@@ -35,7 +35,6 @@
   font-style: normal;
 }
 
-
 $color-dark: #3b3d57;
 $color-link: #3a3d57;
 $color-hover: #03875c;
@@ -49,11 +48,20 @@ $header-height: 50px;
 $body-text-margin: 2.5rem 0;
 $small-screen-view: 990px;
 
-
+html {
+  height: 100%;
+}
 body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
   color: #ffffff;
+
+  background-color: $color-dark;
+  height: 100%;
+}
+app-root {
+  display: block;
+  height: 100%;
 }
 h1 {
   font-family: BoosterMedium, sans-serif;
