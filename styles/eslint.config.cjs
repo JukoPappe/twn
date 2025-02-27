@@ -1,34 +1,18 @@
-const baseConfig = require('./eslint.base.config.cjs');
 const nx = require('@nx/eslint-plugin');
+const baseConfig = require('../eslint.base.config.cjs');
 
 module.exports = [
   ...baseConfig,
-  {
-    ignores: ['**/dist'],
-  },
-  {
-    files: [
-      '**/*.ts',
-      '**/*.tsx',
-      '**/*.js',
-      '**/*.jsx',
-      '**/*.cjs',
-      '**/*.mjs',
-    ],
-    // Override or add rules here
-    rules: {},
-  },
   ...nx.configs['flat/angular'],
   ...nx.configs['flat/angular-template'],
   {
     files: ['**/*.ts'],
     rules: {
-      '@angular-eslint/prefer-standalone': ['warn'],
       '@angular-eslint/directive-selector': [
         'error',
         {
           type: 'attribute',
-          prefix: 'app',
+          prefix: 'lib',
           style: 'camelCase',
         },
       ],
@@ -36,7 +20,7 @@ module.exports = [
         'error',
         {
           type: 'element',
-          prefix: 'app',
+          prefix: 'lib',
           style: 'kebab-case',
         },
       ],

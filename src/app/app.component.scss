@@ -18,12 +18,7 @@
   flex: auto;
   margin-left: styles.$sidebar-full-width;
   padding: 80px 1.5rem;
-
-  background-image: url('../assets/imgs/bg-deco-left.svg'), url('../assets/imgs/bg-deco-right.svg');
-  background-repeat: no-repeat;
   background-color: styles.$color-dark;
-  background-position: 1% bottom, 99% 5px;
-  background-size: 200px, 400px;
 }
 
 /* Smaller screen styles */

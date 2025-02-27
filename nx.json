@@ -93,6 +93,10 @@
     },
     "@nx/angular:component": {
       "style": "scss"
+    },
+    "@nx/angular:library": {
+      "linter": "eslint",
+      "unitTestRunner": "jest"
     }
   },
   "defaultProject": "twn-workspace",
@@ -100,7 +104,7 @@
     "default": {
       "runner": "nx-cloud",
       "options": {
-        "accessToken": "MmIxZWQzMjktNjgyMC00Nzc0LWFjMGUtY2U2NTNhNDVjMWM2fHJlYWQtd3JpdGU="
+        "accessToken": "Y2Q3OTYwNmUtYTc5Ni00NDEyLWIyZmMtMzc4MzY2MDAzYjhlfHJlYWQtd3JpdGU="
       }
     }
   }

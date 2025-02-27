@@ -1,39 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~@fortawesome/fontawesome-free/css/all.css";
-@font-face {
-  font-family: 'BoosterBlack';
-  src: url('assets/fonts/BoosterNextFY-Black.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'BoosterBold';
-  src: url('assets/fonts/BoosterNextFY-Bold.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'BoosterLight';
-  src: url('assets/fonts/BoosterNextFY-Light.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'BoosterMedium';
-  src: url('assets/fonts/BoosterNextFY-Medium.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'BoosterRegular';
-  src: url('assets/fonts/BoosterNextFY-Regular.woff') format('woff');
-}
-@font-face {
-  font-family: 'BoosterThin';
-  src: url('assets/fonts/BoosterNextFY-Thin.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
+@use "styles/src/styles";
+@use "@fortawesome/fontawesome-free/css/all.css";
 
 $color-dark: #3b3d57;
 $color-link: #3a3d57;
@@ -65,17 +32,17 @@ app-root {
   height: 100%;
 }
 h1 {
+  font-family: BoosterBlack, sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+h2 {
   font-family: BoosterMedium, sans-serif;
   font-size: 2.8125rem;;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 0;
   margin-top: 0;
-}
-h2 {
-  font-family: BoosterBlack, sans-serif;
-  text-transform: uppercase;
-  margin-bottom: 0;
 }
 .body-text-holder {
   max-width: 1000px;

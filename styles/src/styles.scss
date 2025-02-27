@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'BoosterBlack';
+  src: url('lib/assets/fonts/BoosterNextFY-Black.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'BoosterBold';
+  src: url('lib/assets/fonts/BoosterNextFY-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'BoosterLight';
+  src: url('lib/assets/fonts/BoosterNextFY-Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'BoosterMedium';
+  src: url('lib/assets/fonts/BoosterNextFY-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'BoosterRegular';
+  src: url('lib/assets/fonts/BoosterNextFY-Regular.woff') format('woff');
+}
+@font-face {
+  font-family: 'BoosterThin';
+  src: url('lib/assets/fonts/BoosterNextFY-Thin.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.main {
+  background-image: url('lib/assets/imgs/bg-deco-left.svg'), url('lib/assets/imgs/bg-deco-right.svg');
+  background-repeat: no-repeat;
+  background-position: 1% bottom, 99% 5px;
+  background-size: 200px, 400px;
+}
