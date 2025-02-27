@@ -7,7 +7,7 @@ describe('e2e', () => {
   beforeEach(() => cy.visit('/'));
 
   it('should display header and name on welcome screen', () => {
-    expectElementToContain('header', 'PROOVITÖÖ!');
+    expectElementToContain('header', 'TÖÖ!');
     expectElementToContain('name', 'JUKO PAPPE');
   });
 
