@@ -1,5 +1,6 @@
 <h1>Nimekiri</h1>
-<ng-container *ngIf="(articleList | async) as articles">
+@let articles = articleList | async;
+<ng-container *ngIf="articles">
   <div class="table-container">
     <table>
       <thead>
