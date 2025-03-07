@@ -9,10 +9,10 @@
         </tr>
       </thead>
       <tbody>
-      <!-- Create table rows dynamically based on data input -->
-      <ng-container *ngFor="let article of articles | paginate : paginationIndex; let i = index">
-        <app-table-row [article]="article" [showArticle]="openArticle === i" (openArticle)="articleOpened(i)"></app-table-row>
-      </ng-container>
+        <!-- Create table rows dynamically based on data input -->
+        @for (article of articles | paginate : paginationIndex; track article.id; let i = $index) {
+          <app-table-row [articleInput]="article" [showArticle]="openArticle === i" (openArticle)="articleOpened(i)"></app-table-row>
+        }
       </tbody>
     </table>
   </div>

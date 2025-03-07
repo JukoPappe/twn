@@ -2,7 +2,7 @@ import { articleData } from "./data/article";
 
 export class ServiceCalls {
   stubArticleData() {
-    cy.intercept("GET", "https://proovitoo.twn.ee/api/list/972d2b8a",
+    cy.intercept("GET", "https://twn-project-1729c-default-rtdb.europe-west1.firebasedatabase.app/article.json",
       {
         body: articleData,
         headers: { 'content-type': 'application/json' }

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from "@angular/core";
+import { Component, input, output } from '@angular/core';
 import { Article } from "../../../shared/model/article";
 
 @Component({
@@ -8,14 +8,11 @@ import { Article } from "../../../shared/model/article";
   standalone: false
 })
 export class TableRowComponent {
-  @Input()
-  article?: Article;
-  @Input()
-  showArticle = false;
+  articleInput = input.required<Article>();
 
-  @Output()
-  openArticle = new EventEmitter();
+  showArticle = input.required();
 
+  openArticle = output();
 
   showHideArticle = (): void => {
     this.openArticle.emit();

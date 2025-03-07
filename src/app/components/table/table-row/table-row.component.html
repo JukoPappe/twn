@@ -1,16 +1,17 @@
-<tr (click)="showHideArticle()" [ngClass]="{ 'open-article' : showArticle }">
-  <td>{{ article?.firstname }}</td>
-  <td>{{ article?.surname }}</td>
-  <td>{{ article ? (article.sex | gender) : '' }}</td>
-  <td>{{ article ? (article.date | date) : '' }}</td>
-  <td>{{ article ? (article.phone | phoneNumber) : '' }}</td>
+@let article = articleInput();
+<tr (click)="showHideArticle()" [ngClass]="{ 'open-article' : showArticle() }">
+  <td>{{ article.firstname }}</td>
+  <td>{{ article.surname }}</td>
+  <td>{{ article.sex | gender }}</td>
+  <td>{{ article.date | date }}</td>
+  <td>{{ article.phone | phoneNumber }}</td>
 </tr>
-<tr *ngIf="showArticle" [ngClass]="{ 'open-article' : showArticle }">
+<tr *ngIf="showArticle()" [ngClass]="{ 'open-article' : showArticle() }">
   <td colspan="5">
     <div class="article-container">
-      <img alt="article-image" [src]="article?.image">
+      <img alt="article-image" [src]="article.image">
       <div class="text-container">
-        <div class="text-holder" [innerHTML]="article ? (article.body | truncateText : 297) : ''"></div>
+        <div class="text-holder" [innerHTML]="article.body | truncateText : 297"></div>
       </div>
     </div>
   </td>
